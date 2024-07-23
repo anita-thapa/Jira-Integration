@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="yourComponentName">
+    <apiVersion>59.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <!-- Define the supported page types -->
+        <!-- <target>lightning__RecordPage</target> -->
+        <target>lightning__HomePage</target>
+        <!-- <target>lightning__AppPage</target> -->
+        <target>lightning__FlowScreen</target>
+        <!-- Add other supported page types as needed -->
+    </targets>
+    <targetConfigs>
+        <!-- Configuration for a record page -->
+        <targetConfig targets="lightning__FlowScreen">
+
+            <property name="outputProject" type="String" label="Output Project" description="Description of the output project property"/>
+            <property name="outputTime" type="String" label="Output Time" description="Description of the output time property"/>
+
+        </targetConfig>
+        <!-- Add other targetConfigs for additional page types as needed -->
+    </targetConfigs>
+</LightningComponentBundle>

@@ -1,0 +1,22 @@
+.shift-left {
+    margin-left: -15px; /* Adjust this value as needed */
+}
+.slds-box {
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+}
+
+.slds-form-element {
+    display: flex;
+    flex-direction: column;
+}
+
+.slds-combobox_container {
+    width: 100%;
+}
+
+.slds-button {
+    text-transform: uppercase;
+    font-weight: bold;
+}

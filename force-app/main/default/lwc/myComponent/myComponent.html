@@ -1,0 +1,45 @@
+<template>
+    <div class="shift-left">
+        <div class="slds-box slds-box_x-small slds-m-around_medium">
+            <h1 class="slds-text-heading_medium slds-m-bottom_medium">Project Selection</h1>
+
+            <div class="slds-form-element slds-m-bottom_medium">
+                <lightning-combobox
+                    name="projectPicklist"
+                    label="Project"
+                    value={selectedProject}
+                    options={projectOptions}
+                    onchange={handleProjectChange}
+                    class="slds-combobox_container"
+                ></lightning-combobox>
+            </div>
+
+            <!-- <div class="slds-form-element slds-m-bottom_medium">
+                <lightning-combobox
+                    name="timePicklist"
+                    label="Time"
+                    value={selectedTime}
+                    options={timeList}
+                    onchange={handleTimeChange}
+                    class="slds-combobox_container"
+                ></lightning-combobox>
+            </div> -->
+
+            <div class="slds-m-top_medium">
+                <lightning-button
+                    variant="brand"
+                    label="Submit"
+                    title="Submit"
+                    onclick={handleButtonClick}
+                    class="slds-m-right_x-small"
+                ></lightning-button>
+                <lightning-button
+                    variant="neutral"
+                    label="Cancel"
+                    title="Cancel"
+                    onclick={handleCancel}
+                ></lightning-button>
+            </div>
+        </div>
+    </div>
+</template>

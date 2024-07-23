@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Delete Jira Project Records" icon-name="utility:picklist_type">
+        <div class="slds-p-around_medium">
+            <lightning-combobox
+                name="project"
+                label="Project"
+                placeholder="Select a project"
+                options={projectOptions}
+                onchange={handleProjectChange}>
+            </lightning-combobox>
+           
+            <!-- Container div for the button to apply alignment and margin -->
+            <div class="slds-text-align_left slds-m-top_medium">
+                <lightning-button
+                    variant="destructive"
+                    label=" Delete Project Records"
+                    onclick={handleDeleteProject}
+                    title="Delete action"
+                    icon-name="utility:delete"
+                    icon-position="right">
+                </lightning-button>
+            </div>
+        </div>  
+        <template if:true={isDeleting}>
+            <lightning-spinner alternative-text="Deleting records" size="medium"></lightning-spinner>
+        </template>
+    </lightning-card>
+</template>
